@@ -91,23 +91,21 @@
             <tr>
                 <td class="auto-style6">Password</td>
                 <td class="auto-style7">
-                    <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rqfpw" runat="server" ControlToValidate="txtPassword" ErrorMessage="Vui lòng nhập mật khẩu" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style5">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style6">ConfirmPassword</td>
-                <td class="auto-style7">
-                    <asp:TextBox ID="txtCfPass" runat="server"></asp:TextBox>
+                <td class="auto-style8">ConfirmPassword</td>
+                <td class="auto-style9">
+                    <asp:TextBox ID="txtCfPass" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:CompareValidator ID="cvCfPass" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtCfPass" ErrorMessage="Mật khẩu vừa nhập không trùng" ForeColor="Pink"></asp:CompareValidator>
                 </td>
-                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style10"></td>
             </tr>
             <tr>
-                <td class="auto-style6">
-                    <asp:Button ID="btnDangKy" runat="server" OnClick="btnDangKy_Click" Text="Dang ky" />
-                </td>
+                <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style7">
                     <asp:Label ID="lblMessage" runat="server" ForeColor="Red" Text="Label"></asp:Label>
                 </td>
@@ -115,27 +113,25 @@
             </tr>
             <tr>
                 <td class="auto-style6">
-                    <asp:Button ID="btnXoaForm" runat="server" OnClick="btnXoaForm_Click" Text="Xoa Form" />
+                    <asp:Button ID="btnDangKy" runat="server" OnClick="btnDangKy_Click" Text="Đăng ký" />
                 </td>
-                <td class="auto-style7"></td>
+                <td class="auto-style7">
+                    <asp:Button ID="btnXoaForm" runat="server" OnClick="btnXoaForm_Click" Text="Xóa Trắng Form" Width="100px" />
+                    <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Cập nhật" style =" margin-left:50px"/>
+                </td>
+                <td class="auto-style5">&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
                 <td class="auto-style5">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style7">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
-                        <Columns>
-                            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                            <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
-                            <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-                            <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />
-                            <asp:BoundField DataField="Lastname" HeaderText="Lastname" SortExpression="Lastname" />
-                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                            <asp:CheckBoxField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-                            <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                        </Columns>
+                    <asp:GridView ID="GridView1" runat="server">
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserInforConnectionString %>" SelectCommand="SELECT [Id], [Username], [Password], [Firstname], [Lastname], [Email], [Gender], [Address] FROM [Userinformation]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style5">&nbsp;</td>
             </tr>
