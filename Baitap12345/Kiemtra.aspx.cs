@@ -51,4 +51,14 @@ public partial class Kiemtra : System.Web.UI.Page
         }
  
     }
+    protected void btnXoaForm_Click(object sender, EventArgs e)
+    {
+        txtFirstName.Text = "";
+        txtLastName.Text = "";
+        txtEmail.Text = "";
+        txtUserName.Text = "";
+        txtPassword.Text = "";
+        txtAddress.Text = "";
+        
+    }
 }
