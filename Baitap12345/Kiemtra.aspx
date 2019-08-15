@@ -12,13 +12,13 @@
             width: 2%;
         }
         .auto-style6 {
-            width: 109px;
+            width: 107px;
         }
         .auto-style7 {
             width: 83%;
         }
         .auto-style8 {
-            width: 109px;
+            width: 107px;
             height: 30px;
         }
         .auto-style9 {
@@ -28,6 +28,18 @@
         .auto-style10 {
             width: 2%;
             height: 30px;
+        }
+        .auto-style11 {
+            width: 107px;
+            height: 26px;
+        }
+        .auto-style12 {
+            width: 83%;
+            height: 26px;
+        }
+        .auto-style13 {
+            width: 2%;
+            height: 26px;
         }
     </style>
 </head>
@@ -74,11 +86,11 @@
                 <td class="auto-style5">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style6">Address</td>
-                <td class="auto-style7">
+                <td class="auto-style11">Address</td>
+                <td class="auto-style12">
                     <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
                 </td>
-                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style13"></td>
             </tr>
             <tr>
                 <td class="auto-style8">UserName</td>
@@ -117,7 +129,7 @@
                 </td>
                 <td class="auto-style7">
                     <asp:Button ID="btnXoaForm" runat="server" OnClick="btnXoaForm_Click" Text="Xóa Trắng Form" Width="100px" />
-                    <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Cập nhật" style =" margin-left:50px"/>
+                    <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" style =" margin-left:50px" OnClick="btnUpdate_Click"/>
                 </td>
                 <td class="auto-style5">&nbsp;</td>
             </tr>

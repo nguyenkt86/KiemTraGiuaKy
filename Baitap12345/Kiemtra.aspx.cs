@@ -61,4 +61,8 @@ public partial class Kiemtra : System.Web.UI.Page
         txtAddress.Text = "";
         
     }
+    protected void btnUpdate_Click(object sender, EventArgs e)
+    {
+
+    }
 }
