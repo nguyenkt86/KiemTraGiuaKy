@@ -142,8 +142,19 @@
             <tr>
                 <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style7">
-                    <asp:GridView ID="GridView1" runat="server">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+                        <Columns>
+                            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                            <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
+                            <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+                            <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />
+                            <asp:BoundField DataField="Lastname" HeaderText="Lastname" SortExpression="Lastname" />
+                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                            <asp:CheckBoxField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
+                            <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+                        </Columns>
                     </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserInforConnectionString %>" SelectCommand="SELECT [Id], [Username], [Password], [Firstname], [Lastname], [Email], [Gender], [Address] FROM [Userinformation]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style5">&nbsp;</td>
             </tr>
